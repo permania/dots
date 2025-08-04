@@ -1,0 +1,2 @@
+* My Dotfiles
+These are my dotfiles for Niri. They are currently pretty barren because I just started on them, but they will grow eventually.

@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+
+    "modules-left": [
+        "niri/workspaces",
+    ],
+
+    "modules-center": [
+	"niri/window",
+    ],
+
+    "modules-right": [
+        "tray",
+	"mpd",
+        "battery",
+        "network",
+        "pulseaudio",
+        "clock"
+    ],
+
+    "niri/workspaces": {
+        "disable-scroll": true,
+        "disable-click": true,
+    },
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%x @ %I:%M %p}",
+        "tooltip": false
+    },
+
+    "mpd": {
+	"format": "{songPosition}/{queueLength}: {title} by {artist}",
+    },
+
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "format": "mem {percentage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 80
+        }
+    },
+
+    "battery": {
+        "format": "bat {capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "wifi {essid}",
+        "format-disconnected" : "disc",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    }
+}
