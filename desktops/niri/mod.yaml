@@ -1,0 +1,11 @@
+exports: null
+
+include:
+  - module: "alacritty"
+    path: "programs/term"
+  - module: "waybar"
+    path: "programs/bar"
+  - module: "fuzzel"
+    path: "programs/run"
+
+templates: null

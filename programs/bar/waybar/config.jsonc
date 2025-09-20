@@ -42,6 +42,7 @@
 
     "mpd": {
 	"format": "{songPosition}/{queueLength}: {title} by {artist}",
+	"interval": 1,
     },
 
     "cpu": {

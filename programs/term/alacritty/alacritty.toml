@@ -1,0 +1,30 @@
+window.opacity = 1.0
+
+[colors.normal]
+black = "#!( global.colors.black )!"
+blue = "#!( global.colors.blue )!"
+cyan = "#!( global.colors.cyan )!"
+green = "#!( global.colors.green )!"
+magenta = "#!( global.colors.magenta )!"
+red = "#!( global.colors.red )!"
+white = "#!( global.colors.white )!"
+yellow = "#!( global.colors.yellow )!"
+
+[colors.primary]
+background = "#!( global.colors.background )!"
+foreground = "#!( global.colors.foreground )!"
+
+[font]
+size = 16
+
+[font.normal]
+family = "!( global.fonts.foreground )!"
+style = "Regular"
+
+[general]
+live_config_reload = true
+
+[window.padding]
+x = 6
+y = 6
+

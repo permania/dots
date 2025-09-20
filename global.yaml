@@ -1,0 +1,25 @@
+templates:
+  colors:
+    background: "171b24"
+    lightbg: "242936"
+    foreground: "cccac2"
+    darkfg: "8a9199"
+    black: "1f2430"
+    blue: "5ccfe6"
+    cyan: "88c0d0"
+    green: "d5ff80"
+    magenta: "d4bfff"
+    red: "f28779"
+    white: "f3f4f5"
+    yellow: "ffd173"
+
+  fonts:
+    foreground: "Maple Mono"
+    secondary: "VictorMono Nerd Font"
+
+  wallpaper: "/home/corn/Wallpaper/iceberg.jpeg"
+
+config:
+  delimiters:
+    open: "!("
+    close: ")!"
