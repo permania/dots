@@ -1,0 +1,9 @@
+exports: null
+
+include:
+  - module: "alacritty"
+    path: "programs/term"
+  - module: "rofi"
+    path: "programs/run"
+
+templates: null

@@ -15,7 +15,7 @@ background = "#!( global.colors.background )!"
 foreground = "#!( global.colors.foreground )!"
 
 [font]
-size = 16
+size = 6
 
 [font.normal]
 family = "!( global.fonts.foreground )!"
@@ -25,6 +25,5 @@ style = "Regular"
 live_config_reload = true
 
 [window.padding]
-x = 6
-y = 6
-
+x = 8
+y = 8

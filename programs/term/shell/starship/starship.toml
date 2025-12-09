@@ -1,0 +1,66 @@
+palette = "dsdm"
+
+format = '''$username:$directory$character'''
+
+add_newline = false
+
+right_format = '$nix_shell$git_commit'
+
+[username]
+format = '[$user]($style)'
+style_user = 'yellow'
+show_always = true
+
+[status]
+format = '[exit code $status ]($style)'
+style = 'comment'
+disabled = false
+
+[cmd_duration]
+format = '[in $duration]($style)'
+style = 'comment'
+min_time = 0
+show_notifications = true
+show_milliseconds = true
+disabled = false
+
+[character]
+success_symbol = '\$'
+error_symbol = '\$'
+
+[directory]
+truncation_length = 2
+truncation_symbol = ''
+format = '[$read_only]($read_only_style)[$path ]($style)'
+style = 'blue'
+read_only = "READONLY:"
+read_only_style = 'red'
+
+[git_branch]
+always_show_remote = true
+format = ' $remote_name:$branch '
+style = 'bold purple'
+symbol = ''
+disabled = false
+
+[git_commit]
+commit_hash_length = 7
+format = '[$hash]($style)'
+style = 'purple'
+only_detached = false
+disabled = false
+
+[nix_shell]
+symbol = ""
+
+[palettes.dsdm]
+background = "!( global.colors.background )!"
+current_line = "!( global.colors.lightbg )!"
+foreground = "!( global.colors.foreground )!"
+comment = "!( global.colors.black )!"
+cyan = "!( global.colors.cyan )!"
+blue = "!( global.colors.blue )!"
+green = "!( global.colors.green )!"
+red = "!( global.colors.red )!"
+purple = "!( global.colors.magenta )!"
+yellow = "!( global.colors.yellow )!"

@@ -1,2 +1,5 @@
 * My Dotfiles
-These are my dotfiles for Niri. They are currently pretty barren because I just started on them, but they will grow eventually.
+These are my dotfiles, right now there are profiles for =niri= and =qtile=, but they will grow to include various desktops and apps eventually.
+
+* DSDM
+I use =dsdm=, get it here: [[https://github.com/permania/dsdm]]

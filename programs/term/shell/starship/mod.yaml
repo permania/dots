@@ -1,0 +1,7 @@
+exports: 
+  - source: "starship.toml"
+    target: "~/.config/starship.toml"
+
+include: null
+
+templates: null
