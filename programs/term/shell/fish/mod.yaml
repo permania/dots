@@ -1,5 +1,7 @@
 exports: null
 
-include: null
+include:
+  - module: "starship"
+    path: "programs/term/shell"
 
 templates: null

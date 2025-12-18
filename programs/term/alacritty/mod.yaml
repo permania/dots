@@ -4,4 +4,6 @@ include:
   - module: "fish"
     path: "programs/term/shell"
 
-templates: null
+templates:
+  font:
+    size: "9"

@@ -1,14 +1,14 @@
 palette = "dsdm"
 
-format = '''$username:$directory$character'''
+format = '''$username[ : ](bg:lightbg)$directory$character'''
 
 add_newline = false
 
 right_format = '$nix_shell$git_commit'
 
 [username]
-format = '[$user]($style)'
-style_user = 'yellow'
+format = '[ $user ]($style)'
+style_user = 'yellow bg:darkbg'
 show_always = true
 
 [status]
@@ -25,16 +25,16 @@ show_milliseconds = true
 disabled = false
 
 [character]
-success_symbol = '\$'
-error_symbol = '\$'
+success_symbol = ''
+error_symbol = ''
 
 [directory]
 truncation_length = 2
 truncation_symbol = ''
-format = '[$read_only]($read_only_style)[$path ]($style)'
-style = 'blue'
-read_only = "READONLY:"
-read_only_style = 'red'
+format = '[$read_only]($read_only_style)[ $path ]($style)'
+style = 'blue bg:darkbg'
+read_only = " READONLY:"
+read_only_style = 'red bg:darkbg'
 
 [git_branch]
 always_show_remote = true
@@ -54,13 +54,17 @@ disabled = false
 symbol = ""
 
 [palettes.dsdm]
-background = "!( global.colors.background )!"
-current_line = "!( global.colors.lightbg )!"
-foreground = "!( global.colors.foreground )!"
-comment = "!( global.colors.black )!"
-cyan = "!( global.colors.cyan )!"
-blue = "!( global.colors.blue )!"
-green = "!( global.colors.green )!"
-red = "!( global.colors.red )!"
-purple = "!( global.colors.magenta )!"
-yellow = "!( global.colors.yellow )!"
+background	=	 "#1d2021"
+darkbg		=	 "#141617"
+lightbg		=	 "#282828"
+foreground	=	 "#ebdbb2"
+lightfg		=	 "#fbf1c7"
+darkfg		=	 "#a89984"
+black		=	 "#1d2021"
+red		=        "#fb4934"
+green		=	 "#b8bb26"
+yellow		=	 "#fabd2f"
+blue		=	 "#83a598"
+magenta		=	 "#d3869b"
+cyan		=	 "#8ec07c"
+white		=	 "#ebdbb2"

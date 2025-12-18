@@ -1,0 +1,6 @@
+#!/bin/sh
+
+emacs --daemon &
+nitrogen --restore &
+picom &
+dunst &

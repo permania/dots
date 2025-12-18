@@ -1,10 +1,10 @@
 * {
     font: "!( global.fonts.foreground )! Bold 12";
-    foreground: #!( global.colors.lightfg )!;
-    background: #!( global.colors.darkbg )!;
-    selected-background: #!( global.colors.lightbg )!;
-    selected-foreground: #!( global.colors.lightfg )!;
-    bordercolor: #!( global.colors.yellow )!;
+    foreground: !( global.colors.lightfg )!;
+    background: !( global.colors.darkbg )!;
+    selected-background: !( global.colors.lightbg )!;
+    selected-foreground: !( global.colors.lightfg )!;
+    bordercolor: !( global.colors.yellow )!;
 }
 
 configuration {
