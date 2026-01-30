@@ -1,6 +1,6 @@
 palette = "dsdm"
 
-format = '''$username[ : ](bg:lightbg)$directory$character'''
+format = '''$username[ :: ](bg:lightbg)$directory$character'''
 
 add_newline = false
 

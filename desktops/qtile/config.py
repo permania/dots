@@ -65,6 +65,7 @@ keys = [
     EKey("M-<space>", lazy.next_layout()),
     EKey("M-q", lazy.window.kill()),
     EKey("M-<tab>", lazy.window.toggle_fullscreen(),),
+    EKey("M-b", lazy.hide_show_bar("top")),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -116,8 +117,11 @@ for i in groups:
 layouts = [
     layout.MonadTall(border_width=3, border_normal="!( global.colors.lightbg )!", border_focus="!( global.colors.yellow )!", margin=5),
     layout.MonadWide(border_width=3, border_normal="!( global.colors.lightbg )!", border_focus="!( global.colors.yellow )!", margin=5),
-    layout.Zoomy(margin=5),
+    layout.RatioTile(border_width=3, border_normal="!( global.colors.lightbg )!", border_focus="!( global.colors.yellow )!", margin=5),
+    # layout.Zoomy(margin=5),
     layout.Max(),
+
+    # layout.TreeTab(),
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -137,6 +141,44 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 screens = [
+    Screen(
+        top=bar.Bar(
+            [
+                widget.GroupBox(
+                    font="!( global.fonts.foreground )!",
+                    highlight_method='block',
+                    active='!( global.colors.yellow )!',
+                    inactive='!( global.colors.darkfg )!',
+                    this_current_screen_border='!( global.colors.lightbg)!',
+                ),
+                widget.WindowName(foreground="!( global.colors.white )!"),
+                widget.Chord(
+                    name_transform=lambda name: name.upper(),
+                    fmt="<b><i>{}</i></b>",
+                    foreground="!( global.colors.white )!"
+                ),
+                widget.Systray(foreground="!( global.colors.white )!"),
+                widget.CurrentLayout(foreground="!( global.colors.white )!"),
+                widget.Volume(fmt="SND {}", foreground="!( global.colors.white )!"),
+                widget.Battery(
+                    fmt="INBAT {}",
+                    battery="BAT0", # Internal
+                    foreground="!( global.colors.white )!"
+                ),
+                widget.Battery(
+                    fmt="EXBAT {}",
+                    battery="BAT1", # External
+                    foreground="!( global.colors.foreground )!"
+                ),
+                widget.Clock(format="%a %m/%d @ %H:%M", foreground="!( global.colors.white )!"),
+            ],
+            24,
+            background="!( global.colors.darkbg )!",
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+        ),
+        background="#666666",
+    ),
     Screen(
         top=bar.Bar(
             [
